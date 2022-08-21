@@ -1,10 +1,7 @@
-type Course = {
-    name: string,
-    exerciseCount: number
-}
+import {CoursePart}  from "../types";
 
 type CourseList = {
-    courseParts: Course[]
+    courseParts: CoursePart[]
 }
 
 const Total = (props: CourseList) => {
@@ -14,9 +11,9 @@ const Total = (props: CourseList) => {
         <p>
             Number of exercises{" "}
             {courseParts.reduce((carry, part) => carry + part.exerciseCount, 0)}
-            </p>
+        </p>
     </div>
     )
 }
 
-export {Total, type Course} 
+export {Total};
